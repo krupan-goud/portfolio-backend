@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors(
     {
-        origin: ['portfolio-frontend-psi-lime.vercel.app'],
+        origin: ['portfolio-frontend-navy.vercel.app'],
         methods: ['POST', 'GET'],
         credentials: true
     }
