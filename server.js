@@ -6,7 +6,13 @@ const router = require('./routes/contact.routes');
 app.disable("x-powered-by");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ['https://deploy-mern-1whq.vercel.app'],
+        methods: ['POST', 'GET'],
+        credentials: true
+    }
+));
 console.log("API HIT INDEX :::");
 
 require('./utils/mongoose.config')
